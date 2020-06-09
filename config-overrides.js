@@ -18,6 +18,7 @@ const {
       javascriptEnabled: true,
     }),
     addWebpackAlias({
-      '@': path.resolve(__dirname, 'src')
+      '@': path.resolve(__dirname, 'src'),
+      '@@': path.resolve(__dirname, 'src/pages')
     })
   )
