@@ -1,24 +1,28 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import Model from '@/components/Model'
-import { Table, Space, Button } from 'antd';
+import { Table, Space, Button, Form } from 'antd';
 import { getName, getdel, status } from '@/action/home'
 
 function Home (props) {
   const { getName, getdel, data, status } = props
   const [datatwo, setDat] = useState(data)
-  // const [obj, setObj] = useState({})
-  const obj = {}
+  const [obj, setObj] = useState({})
+  
+  const [form] = Form.useForm();
+
   useEffect(() => {
     getName()
   }, [datatwo])
 
   const shan = (val) =>{
     getdel(val)
+    setDat(data)
   }
 
   const gai = (val) => {
-    obj = val
+    setObj(val)
+    status(true)
   }
 
   const show = () => {

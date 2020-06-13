@@ -21,6 +21,7 @@ export function getAdd (options) {
 }
 
 export function getUpd (options) {
+  post(api.update, options)
   return {
     //type  都是大写
     type:'TECH_HOME_LIST',

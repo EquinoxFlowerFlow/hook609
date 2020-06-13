@@ -7,16 +7,16 @@ const Root = ({ route }) => renderRoutes(route.routes)
 
 const routes = [
       {
-        path: '/login',
-        component: Login,
-      },
-      {
         path: '/reg',
         component: Reg
       },
       {
         path: '/home',
         component: Home
+      },
+      {
+        path: '/',
+        component: Login,
       },
     ]
 
